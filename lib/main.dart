@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lab1/screens/home_screen.dart';
+import 'package:lab1/screens/clothes_detail_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '213213',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
         useMaterial3: true,
       ),
-      home: MyHomePage(title: '213213'),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => const Home(),
+        '/details' : (context) => const Details(),
+      },
     );
   }
 }
